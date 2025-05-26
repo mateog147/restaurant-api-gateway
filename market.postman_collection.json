@@ -1,0 +1,855 @@
+{
+	"info": {
+		"_postman_id": "ba345f82-126e-4434-a9d7-6debacf1f0e7",
+		"name": "market",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25834960"
+	},
+	"item": [
+		{
+			"name": "restaurant",
+			"item": [
+				{
+					"name": "Get Order By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restaurant-kitchen-ms.onrender.com/kitchen/orders/:orderID",
+							"protocol": "https",
+							"host": [
+								"restaurant-kitchen-ms",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"kitchen",
+								"orders",
+								":orderID"
+							],
+							"variable": [
+								{
+									"key": "orderID",
+									"value": "order-1748289875248-385"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all Orders Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantity\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:3000/kitchen/orders/order-1748214970811-842",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"kitchen",
+										"orders",
+										"order-1748214970811-842"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "777"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"309-tlakHVSPWoTkDj+mBTcxcydXWIU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 23:17:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6833a4ba90f681c38c8fb0e3\",\n    \"orderId\": \"order-1748214970811-842\",\n    \"quantity\": 3,\n    \"recipes\": [\n        {\n            \"name\": \"Ensalada de Papa\",\n            \"description\": \"Papa hervida con pollo, cebolla y limón.\",\n            \"ingredients\": {\n                \"potato\": 0.3,\n                \"chicken\": 0.2,\n                \"onion\": 0.05,\n                \"lemon\": 0.05\n            },\n            \"status\": \"ready\"\n        },\n        {\n            \"name\": \"Hamburguesa Clásica\",\n            \"description\": \"Hamburguesa de carne con lechuga, tomate, cebolla y kétchup.\",\n            \"ingredients\": {\n                \"meat\": 0.2,\n                \"lettuce\": 0.1,\n                \"tomato\": 0.1,\n                \"onion\": 0.05,\n                \"ketchup\": 0.05,\n                \"cheese\": 0.05\n            },\n            \"status\": \"ready\"\n        },\n        {\n            \"name\": \"Hamburguesa Clásica\",\n            \"description\": \"Hamburguesa de carne con lechuga, tomate, cebolla y kétchup.\",\n            \"ingredients\": {\n                \"meat\": 0.2,\n                \"lettuce\": 0.1,\n                \"tomato\": 0.1,\n                \"onion\": 0.05,\n                \"ketchup\": 0.05,\n                \"cheese\": 0.05\n            },\n            \"status\": \"ready\"\n        }\n    ],\n    \"status\": \"ready\",\n    \"createdAt\": \"2025-05-25T23:16:10.811Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restaurant-kitchen-ms.onrender.com/kitchen/orders",
+							"protocol": "https",
+							"host": [
+								"restaurant-kitchen-ms",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"kitchen",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantity\": 3\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:3000/kitchen/orders",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"kitchen",
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "785"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"311-sIGTI1d8uifL4sif5zzn2k4B5IA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 23:16:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"orderId\": \"order-1748214970811-842\",\n    \"quantity\": 3,\n    \"recipes\": [\n        {\n            \"name\": \"Ensalada de Papa\",\n            \"description\": \"Papa hervida con pollo, cebolla y limón.\",\n            \"ingredients\": {\n                \"potato\": 0.3,\n                \"chicken\": 0.2,\n                \"onion\": 0.05,\n                \"lemon\": 0.05\n            },\n            \"status\": \"pending\"\n        },\n        {\n            \"name\": \"Hamburguesa Clásica\",\n            \"description\": \"Hamburguesa de carne con lechuga, tomate, cebolla y kétchup.\",\n            \"ingredients\": {\n                \"meat\": 0.2,\n                \"lettuce\": 0.1,\n                \"tomato\": 0.1,\n                \"onion\": 0.05,\n                \"ketchup\": 0.05,\n                \"cheese\": 0.05\n            },\n            \"status\": \"pending\"\n        },\n        {\n            \"name\": \"Hamburguesa Clásica\",\n            \"description\": \"Hamburguesa de carne con lechuga, tomate, cebolla y kétchup.\",\n            \"ingredients\": {\n                \"meat\": 0.2,\n                \"lettuce\": 0.1,\n                \"tomato\": 0.1,\n                \"onion\": 0.05,\n                \"ketchup\": 0.05,\n                \"cheese\": 0.05\n            },\n            \"status\": \"pending\"\n        }\n    ],\n    \"status\": \"pending\",\n    \"createdAt\": \"2025-05-25T23:16:10.811Z\",\n    \"_id\": \"6833a4ba90f681c38c8fb0e3\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all Orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restaurant-kitchen-ms.onrender.com/kitchen/orders",
+							"protocol": "https",
+							"host": [
+								"restaurant-kitchen-ms",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"kitchen",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantity\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:3000/kitchen/orders",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"kitchen",
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "6035"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1793-fcPWUkWOJc76MnUTI0oFZf1fvYE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 22:59:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"68261e441e9c9e6d9f8cfba7\",\n        \"orderId\": \"order-1747328573343-641\",\n        \"quantity\": 2,\n        \"recipes\": [\n            {\n                \"name\": \"Arroz con Pollo\",\n                \"description\": \"Clásico arroz cocido con pollo, tomate y cebolla.\",\n                \"ingredients\": {\n                    \"rice\": 0.2,\n                    \"chicken\": 0.3,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05,\n                    \"lemon\": 0.05\n                }\n            },\n            {\n                \"name\": \"Hamburguesa Clásica\",\n                \"description\": \"Hamburguesa de carne con lechuga, tomate, cebolla y kétchup.\",\n                \"ingredients\": {\n                    \"meat\": 0.2,\n                    \"lettuce\": 0.1,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05,\n                    \"ketchup\": 0.05,\n                    \"cheese\": 0.05\n                }\n            }\n        ],\n        \"status\": \"pending\",\n        \"createdAt\": \"2025-05-15T17:02:57.222Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68262f3cfe8409cde5063ce9\",\n        \"orderId\": \"order-1747332920678-623\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Arroz Frito con Pollo\",\n                \"description\": \"Arroz salteado con pollo, tomate y cebolla.\",\n                \"ingredients\": {\n                    \"rice\": 0.2,\n                    \"chicken\": 0.2,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05\n                }\n            }\n        ],\n        \"status\": \"pending\",\n        \"createdAt\": \"2025-05-15T18:15:24.214Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68263ce7f8212adde3de689d\",\n        \"orderId\": \"order-1747336423835-30\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Hamburguesa Clásica\",\n                \"description\": \"Hamburguesa de carne con lechuga, tomate, cebolla y kétchup.\",\n                \"ingredients\": {\n                    \"meat\": 0.2,\n                    \"lettuce\": 0.1,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05,\n                    \"ketchup\": 0.05,\n                    \"cheese\": 0.05\n                }\n            }\n        ],\n        \"status\": \"pending\",\n        \"createdAt\": \"2025-05-15T19:13:43.835Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68263d887a285fffc74f71a7\",\n        \"orderId\": \"order-1747336582616-469\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Hamburguesa Clásica\",\n                \"description\": \"Hamburguesa de carne con lechuga, tomate, cebolla y kétchup.\",\n                \"ingredients\": {\n                    \"meat\": 0.2,\n                    \"lettuce\": 0.1,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05,\n                    \"ketchup\": 0.05,\n                    \"cheese\": 0.05\n                }\n            }\n        ],\n        \"status\": \"pending\",\n        \"createdAt\": \"2025-05-15T19:16:22.616Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68264854a598ca79665ff058\",\n        \"orderId\": \"order-1747339348807-682\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Papas Rellenas\",\n                \"description\": \"Papas cocidas rellenas de carne molida, cebolla y queso.\",\n                \"ingredients\": {\n                    \"potato\": 0.4,\n                    \"meat\": 0.25,\n                    \"onion\": 0.05,\n                    \"cheese\": 0.1\n                }\n            }\n        ],\n        \"status\": \"pending\",\n        \"createdAt\": \"2025-05-15T20:02:28.807Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6828e81bd3378ac4193403c7\",\n        \"orderId\": \"order-1747511323823-493\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Ensalada de Papa\",\n                \"description\": \"Papa hervida con pollo, cebolla y limón.\",\n                \"ingredients\": {\n                    \"potato\": 0.3,\n                    \"chicken\": 0.2,\n                    \"onion\": 0.05,\n                    \"lemon\": 0.05\n                }\n            }\n        ],\n        \"status\": \"pending\",\n        \"createdAt\": \"2025-05-17T19:48:43.823Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6828e8b3d3378ac4193403c9\",\n        \"orderId\": \"order-1747511475641-953\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Arroz Frito con Pollo\",\n                \"description\": \"Arroz salteado con pollo, tomate y cebolla.\",\n                \"ingredients\": {\n                    \"rice\": 0.2,\n                    \"chicken\": 0.2,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05\n                },\n                \"status\": \"ready\"\n            }\n        ],\n        \"status\": \"ready\",\n        \"createdAt\": \"2025-05-17T19:51:15.641Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6828e901d3378ac4193403cb\",\n        \"orderId\": \"order-1747511549411-796\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Arroz con Pollo\",\n                \"description\": \"Clásico arroz cocido con pollo, tomate y cebolla.\",\n                \"ingredients\": {\n                    \"rice\": 0.2,\n                    \"chicken\": 0.3,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05,\n                    \"lemon\": 0.05\n                }\n            }\n        ],\n        \"status\": \"pending\",\n        \"createdAt\": \"2025-05-17T19:52:29.411Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6828e9bcffde5a04dba589f0\",\n        \"orderId\": \"order-1747511737207-838\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Arroz con Pollo\",\n                \"description\": \"Clásico arroz cocido con pollo, tomate y cebolla.\",\n                \"ingredients\": {\n                    \"rice\": 0.2,\n                    \"chicken\": 0.3,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05,\n                    \"lemon\": 0.05\n                }\n            }\n        ],\n        \"status\": \"pending\",\n        \"createdAt\": \"2025-05-17T19:55:37.207Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68338c8af449d101f9be5d93\",\n        \"orderId\": \"order-1748208763552-86\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Arroz con Pollo\",\n                \"description\": \"Clásico arroz cocido con pollo, tomate y cebolla.\",\n                \"ingredients\": {\n                    \"rice\": 0.2,\n                    \"chicken\": 0.3,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05,\n                    \"lemon\": 0.05\n                },\n                \"status\": \"pending\"\n            }\n        ],\n        \"status\": \"in_progress\",\n        \"createdAt\": \"2025-05-25T21:32:58.561Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68338cb7f449d101f9be5d95\",\n        \"orderId\": \"order-1748208820619-539\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Papas Rellenas\",\n                \"description\": \"Papas cocidas rellenas de carne molida, cebolla y queso.\",\n                \"ingredients\": {\n                    \"potato\": 0.4,\n                    \"meat\": 0.25,\n                    \"onion\": 0.05,\n                    \"cheese\": 0.1\n                },\n                \"status\": \"pending\"\n            }\n        ],\n        \"status\": \"in_progress\",\n        \"createdAt\": \"2025-05-25T21:33:42.729Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68338d0ff449d101f9be5d97\",\n        \"orderId\": \"order-1748208906687-276\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Ensalada de Papa\",\n                \"description\": \"Papa hervida con pollo, cebolla y limón.\",\n                \"ingredients\": {\n                    \"potato\": 0.3,\n                    \"chicken\": 0.2,\n                    \"onion\": 0.05,\n                    \"lemon\": 0.05\n                },\n                \"status\": \"pending\"\n            }\n        ],\n        \"status\": \"in_progress\",\n        \"createdAt\": \"2025-05-25T21:35:10.112Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68339a0ff449d101f9be5da3\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Arroz Frito con Pollo\",\n                \"description\": \"Arroz salteado con pollo, tomate y cebolla.\",\n                \"ingredients\": {\n                    \"rice\": 0.2,\n                    \"chicken\": 0.2,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05\n                },\n                \"status\": \"ready\"\n            }\n        ],\n        \"status\": \"ready\",\n        \"createdAt\": \"2025-05-25T22:30:39.057Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68339fbee5cc984030bf6569\",\n        \"orderId\": \"order-1748213694448-129\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Arroz Frito con Pollo\",\n                \"description\": \"Arroz salteado con pollo, tomate y cebolla.\",\n                \"ingredients\": {\n                    \"rice\": 0.2,\n                    \"chicken\": 0.2,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05\n                },\n                \"status\": \"ready\"\n            }\n        ],\n        \"status\": \"ready\",\n        \"createdAt\": \"2025-05-25T22:54:54.448Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68339fd4e5cc984030bf656f\",\n        \"orderId\": \"order-1748213716022-492\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Papas Rellenas\",\n                \"description\": \"Papas cocidas rellenas de carne molida, cebolla y queso.\",\n                \"ingredients\": {\n                    \"potato\": 0.4,\n                    \"meat\": 0.25,\n                    \"onion\": 0.05,\n                    \"cheese\": 0.1\n                },\n                \"status\": \"ready\"\n            }\n        ],\n        \"status\": \"ready\",\n        \"createdAt\": \"2025-05-25T22:55:16.022Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68339ffbe5cc984030bf6575\",\n        \"orderId\": \"order-1748213755893-572\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Ensalada de Papa\",\n                \"description\": \"Papa hervida con pollo, cebolla y limón.\",\n                \"ingredients\": {\n                    \"potato\": 0.3,\n                    \"chicken\": 0.2,\n                    \"onion\": 0.05,\n                    \"lemon\": 0.05\n                },\n                \"status\": \"ready\"\n            }\n        ],\n        \"status\": \"ready\",\n        \"createdAt\": \"2025-05-25T22:55:55.893Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6833a00be5cc984030bf657b\",\n        \"orderId\": \"order-1748213771931-248\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Hamburguesa Clásica\",\n                \"description\": \"Hamburguesa de carne con lechuga, tomate, cebolla y kétchup.\",\n                \"ingredients\": {\n                    \"meat\": 0.2,\n                    \"lettuce\": 0.1,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05,\n                    \"ketchup\": 0.05,\n                    \"cheese\": 0.05\n                },\n                \"status\": \"ready\"\n            }\n        ],\n        \"status\": \"ready\",\n        \"createdAt\": \"2025-05-25T22:56:11.931Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get recipes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restaurant-kitchen-ms.onrender.com/kitchen/orders/recipes",
+							"protocol": "https",
+							"host": [
+								"restaurant-kitchen-ms",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"kitchen",
+								"orders",
+								"recipes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get recipes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantity\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:3000/kitchen/orders/recipes",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"kitchen",
+										"orders",
+										"recipes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1017"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f9-6P93fzYtjuBkuqVke5splSieebM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 May 2025 03:21:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"Arroz con Pollo\",\n        \"description\": \"Clásico arroz cocido con pollo, tomate y cebolla.\",\n        \"ingredients\": {\n            \"rice\": 0.2,\n            \"chicken\": 0.3,\n            \"tomato\": 0.1,\n            \"onion\": 0.05,\n            \"lemon\": 0.05\n        }\n    },\n    {\n        \"name\": \"Papas Rellenas\",\n        \"description\": \"Papas cocidas rellenas de carne molida, cebolla y queso.\",\n        \"ingredients\": {\n            \"potato\": 0.4,\n            \"meat\": 0.25,\n            \"onion\": 0.05,\n            \"cheese\": 0.1\n        }\n    },\n    {\n        \"name\": \"Hamburguesa Clásica\",\n        \"description\": \"Hamburguesa de carne con lechuga, tomate, cebolla y kétchup.\",\n        \"ingredients\": {\n            \"meat\": 0.2,\n            \"lettuce\": 0.1,\n            \"tomato\": 0.1,\n            \"onion\": 0.05,\n            \"ketchup\": 0.05,\n            \"cheese\": 0.05\n        }\n    },\n    {\n        \"name\": \"Pollo al Limón\",\n        \"description\": \"Pollo asado con papas y aderezo de limón.\",\n        \"ingredients\": {\n            \"chicken\": 0.3,\n            \"potato\": 0.3,\n            \"onion\": 0.05,\n            \"lemon\": 0.05\n        }\n    },\n    {\n        \"name\": \"Arroz Frito con Pollo\",\n        \"description\": \"Arroz salteado con pollo, tomate y cebolla.\",\n        \"ingredients\": {\n            \"rice\": 0.2,\n            \"chicken\": 0.2,\n            \"tomato\": 0.1,\n            \"onion\": 0.05\n        }\n    },\n    {\n        \"name\": \"Ensalada de Papa\",\n        \"description\": \"Papa hervida con pollo, cebolla y limón.\",\n        \"ingredients\": {\n            \"potato\": 0.3,\n            \"chicken\": 0.2,\n            \"onion\": 0.05,\n            \"lemon\": 0.05\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get today Orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restaurant-kitchen-ms.onrender.com/kitchen/orders/today",
+							"protocol": "https",
+							"host": [
+								"restaurant-kitchen-ms",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"kitchen",
+								"orders",
+								"today"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all Orders Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantity\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:3000/kitchen/orders/today",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"kitchen",
+										"orders",
+										"today"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4069"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fe5-Ge2QJQVN6H6XY7bzrUbtDHA+T4M\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 May 2025 02:49:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"68338c8af449d101f9be5d93\",\n        \"orderId\": \"order-1748208763552-86\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Arroz con Pollo\",\n                \"description\": \"Clásico arroz cocido con pollo, tomate y cebolla.\",\n                \"ingredients\": {\n                    \"rice\": 0.2,\n                    \"chicken\": 0.3,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05,\n                    \"lemon\": 0.05\n                },\n                \"status\": \"pending\"\n            }\n        ],\n        \"status\": \"in_progress\",\n        \"createdAt\": \"2025-05-25T21:32:58.561Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68338cb7f449d101f9be5d95\",\n        \"orderId\": \"order-1748208820619-539\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Papas Rellenas\",\n                \"description\": \"Papas cocidas rellenas de carne molida, cebolla y queso.\",\n                \"ingredients\": {\n                    \"potato\": 0.4,\n                    \"meat\": 0.25,\n                    \"onion\": 0.05,\n                    \"cheese\": 0.1\n                },\n                \"status\": \"pending\"\n            }\n        ],\n        \"status\": \"in_progress\",\n        \"createdAt\": \"2025-05-25T21:33:42.729Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68338d0ff449d101f9be5d97\",\n        \"orderId\": \"order-1748208906687-276\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Ensalada de Papa\",\n                \"description\": \"Papa hervida con pollo, cebolla y limón.\",\n                \"ingredients\": {\n                    \"potato\": 0.3,\n                    \"chicken\": 0.2,\n                    \"onion\": 0.05,\n                    \"lemon\": 0.05\n                },\n                \"status\": \"pending\"\n            }\n        ],\n        \"status\": \"in_progress\",\n        \"createdAt\": \"2025-05-25T21:35:10.112Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68339a0ff449d101f9be5da3\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Arroz Frito con Pollo\",\n                \"description\": \"Arroz salteado con pollo, tomate y cebolla.\",\n                \"ingredients\": {\n                    \"rice\": 0.2,\n                    \"chicken\": 0.2,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05\n                },\n                \"status\": \"ready\"\n            }\n        ],\n        \"status\": \"ready\",\n        \"createdAt\": \"2025-05-25T22:30:39.057Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68339fbee5cc984030bf6569\",\n        \"orderId\": \"order-1748213694448-129\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Arroz Frito con Pollo\",\n                \"description\": \"Arroz salteado con pollo, tomate y cebolla.\",\n                \"ingredients\": {\n                    \"rice\": 0.2,\n                    \"chicken\": 0.2,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05\n                },\n                \"status\": \"ready\"\n            }\n        ],\n        \"status\": \"ready\",\n        \"createdAt\": \"2025-05-25T22:54:54.448Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68339fd4e5cc984030bf656f\",\n        \"orderId\": \"order-1748213716022-492\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Papas Rellenas\",\n                \"description\": \"Papas cocidas rellenas de carne molida, cebolla y queso.\",\n                \"ingredients\": {\n                    \"potato\": 0.4,\n                    \"meat\": 0.25,\n                    \"onion\": 0.05,\n                    \"cheese\": 0.1\n                },\n                \"status\": \"ready\"\n            }\n        ],\n        \"status\": \"ready\",\n        \"createdAt\": \"2025-05-25T22:55:16.022Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68339ffbe5cc984030bf6575\",\n        \"orderId\": \"order-1748213755893-572\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Ensalada de Papa\",\n                \"description\": \"Papa hervida con pollo, cebolla y limón.\",\n                \"ingredients\": {\n                    \"potato\": 0.3,\n                    \"chicken\": 0.2,\n                    \"onion\": 0.05,\n                    \"lemon\": 0.05\n                },\n                \"status\": \"ready\"\n            }\n        ],\n        \"status\": \"ready\",\n        \"createdAt\": \"2025-05-25T22:55:55.893Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6833a00be5cc984030bf657b\",\n        \"orderId\": \"order-1748213771931-248\",\n        \"quantity\": 1,\n        \"recipes\": [\n            {\n                \"name\": \"Hamburguesa Clásica\",\n                \"description\": \"Hamburguesa de carne con lechuga, tomate, cebolla y kétchup.\",\n                \"ingredients\": {\n                    \"meat\": 0.2,\n                    \"lettuce\": 0.1,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05,\n                    \"ketchup\": 0.05,\n                    \"cheese\": 0.05\n                },\n                \"status\": \"ready\"\n            }\n        ],\n        \"status\": \"ready\",\n        \"createdAt\": \"2025-05-25T22:56:11.931Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6833a29a90f681c38c8fb0d5\",\n        \"orderId\": \"order-1748214426649-237\",\n        \"quantity\": 2,\n        \"recipes\": [\n            {\n                \"name\": \"Pollo al Limón\",\n                \"description\": \"Pollo asado con papas y aderezo de limón.\",\n                \"ingredients\": {\n                    \"chicken\": 0.3,\n                    \"potato\": 0.3,\n                    \"onion\": 0.05,\n                    \"lemon\": 0.05\n                },\n                \"status\": \"ready\"\n            },\n            {\n                \"name\": \"Arroz Frito con Pollo\",\n                \"description\": \"Arroz salteado con pollo, tomate y cebolla.\",\n                \"ingredients\": {\n                    \"rice\": 0.2,\n                    \"chicken\": 0.2,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05\n                },\n                \"status\": \"ready\"\n            }\n        ],\n        \"status\": \"ready\",\n        \"createdAt\": \"2025-05-25T23:07:06.649Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6833a4ba90f681c38c8fb0e3\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"quantity\": 3,\n        \"recipes\": [\n            {\n                \"name\": \"Ensalada de Papa\",\n                \"description\": \"Papa hervida con pollo, cebolla y limón.\",\n                \"ingredients\": {\n                    \"potato\": 0.3,\n                    \"chicken\": 0.2,\n                    \"onion\": 0.05,\n                    \"lemon\": 0.05\n                },\n                \"status\": \"ready\"\n            },\n            {\n                \"name\": \"Hamburguesa Clásica\",\n                \"description\": \"Hamburguesa de carne con lechuga, tomate, cebolla y kétchup.\",\n                \"ingredients\": {\n                    \"meat\": 0.2,\n                    \"lettuce\": 0.1,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05,\n                    \"ketchup\": 0.05,\n                    \"cheese\": 0.05\n                },\n                \"status\": \"ready\"\n            },\n            {\n                \"name\": \"Hamburguesa Clásica\",\n                \"description\": \"Hamburguesa de carne con lechuga, tomate, cebolla y kétchup.\",\n                \"ingredients\": {\n                    \"meat\": 0.2,\n                    \"lettuce\": 0.1,\n                    \"tomato\": 0.1,\n                    \"onion\": 0.05,\n                    \"ketchup\": 0.05,\n                    \"cheese\": 0.05\n                },\n                \"status\": \"ready\"\n            }\n        ],\n        \"status\": \"ready\",\n        \"createdAt\": \"2025-05-25T23:16:10.811Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get ingredients",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restaurant-cellar-ms.onrender.com/cellar/ingredients/available",
+							"protocol": "https",
+							"host": [
+								"restaurant-cellar-ms",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"cellar",
+								"ingredients",
+								"available"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get ingredients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantity\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:3001/cellar/movements/in",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3001",
+									"path": [
+										"cellar",
+										"movements",
+										"in"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1333"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"535-3yvRPAm983wiWrujgIrPd7aa+A4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 May 2025 04:01:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"uniqueId\": \"25a69991-29bb-45ba-8f45-a8368f4a46d0\",\n        \"name\": \"ketchup\",\n        \"actual\": 4.85,\n        \"reserved\": 0,\n        \"updatedAt\": \"2025-05-26T04:17:33.000Z\"\n    },\n    {\n        \"uniqueId\": \"884341d4-1a69-480c-9e3d-495b82a5e3e1\",\n        \"name\": \"tomato\",\n        \"actual\": 4.1,\n        \"reserved\": 0,\n        \"updatedAt\": \"2025-05-26T04:17:32.000Z\"\n    },\n    {\n        \"uniqueId\": \"89583cdc-6631-436c-8359-68b67401abc1\",\n        \"name\": \"potato\",\n        \"actual\": 3.1,\n        \"reserved\": 0,\n        \"updatedAt\": \"2025-05-26T04:17:15.000Z\"\n    },\n    {\n        \"uniqueId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"name\": \"onion\",\n        \"actual\": 4.25,\n        \"reserved\": 0,\n        \"updatedAt\": \"2025-05-26T04:17:33.000Z\"\n    },\n    {\n        \"uniqueId\": \"96718697-530d-4422-b7b2-7ac4c0f31688\",\n        \"name\": \"chicken\",\n        \"actual\": 2.6,\n        \"reserved\": 0,\n        \"updatedAt\": \"2025-05-26T04:17:15.000Z\"\n    },\n    {\n        \"uniqueId\": \"a8e374a6-46af-45ad-8e8f-40d9e71692ec\",\n        \"name\": \"rice\",\n        \"actual\": 3.8,\n        \"reserved\": 0,\n        \"updatedAt\": \"2025-05-26T04:08:13.000Z\"\n    },\n    {\n        \"uniqueId\": \"afda1f7d-d08a-4e64-997d-7f6232312385\",\n        \"name\": \"cheese\",\n        \"actual\": 3.85,\n        \"reserved\": 0,\n        \"updatedAt\": \"2025-05-26T04:17:34.000Z\"\n    },\n    {\n        \"uniqueId\": \"bc2e8e84-8617-4314-b076-aa037f46e475\",\n        \"name\": \"meat\",\n        \"actual\": 4.15,\n        \"reserved\": 0,\n        \"updatedAt\": \"2025-05-26T04:17:31.000Z\"\n    },\n    {\n        \"uniqueId\": \"ec14b32b-264f-448f-89e7-a84b6deb362d\",\n        \"name\": \"lettuce\",\n        \"actual\": 4.7,\n        \"reserved\": 0,\n        \"updatedAt\": \"2025-05-26T04:17:31.000Z\"\n    },\n    {\n        \"uniqueId\": \"f38b5fb6-e605-443f-8949-937a4c564536\",\n        \"name\": \"lemon\",\n        \"actual\": 4.75,\n        \"reserved\": 0,\n        \"updatedAt\": \"2025-05-26T04:17:17.000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get markets buys",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3001/cellar/movements/in",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"cellar",
+								"movements",
+								"in"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get markets buys",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantity\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:3001/cellar/movements/in",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3001",
+									"path": [
+										"cellar",
+										"movements",
+										"in"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "180"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b4-5OomDx5QilYSp2JYIi4BsZCkMnQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 May 2025 04:12:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"fc436b45-f3c8-4199-85ea-b9a9b057bd1c\",\n        \"ingredientId\": \"afda1f7d-d08a-4e64-997d-7f6232312385\",\n        \"quantity\": 4,\n        \"type\": \"IN\",\n        \"orderId\": null,\n        \"createdAt\": \"2025-05-26T03:58:54.380Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get store outs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restaurant-cellar-ms.onrender.com/cellar/movements/out",
+							"protocol": "https",
+							"host": [
+								"restaurant-cellar-ms",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"cellar",
+								"movements",
+								"out"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get markets buys Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"quantity\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:3001/cellar/movements/out",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3001",
+									"path": [
+										"cellar",
+										"movements",
+										"out"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13426"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3472-hVdIe1jB1JSeclMRZ9Uw2zPJlqY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 May 2025 04:13:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"02186feb-1644-41ea-ab17-bdc96534dc97\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214426649-237\",\n        \"createdAt\": \"2025-05-26T04:08:16.868Z\"\n    },\n    {\n        \"id\": \"08c33c5c-8c52-4f60-9b9b-761f44810de0\",\n        \"ingredientId\": \"96718697-530d-4422-b7b2-7ac4c0f31688\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213755893-572\",\n        \"createdAt\": \"2025-05-26T03:56:02.745Z\"\n    },\n    {\n        \"id\": \"0d7ddd80-28bf-437e-834e-a7f8bb2c1c18\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:01.361Z\"\n    },\n    {\n        \"id\": \"1385478d-9cdb-45be-91f0-e452f2bbd61f\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214426649-237\",\n        \"createdAt\": \"2025-05-26T04:08:00.170Z\"\n    },\n    {\n        \"id\": \"186d56ec-7f9f-4256-a484-a36f61f4f5ba\",\n        \"ingredientId\": \"a8e374a6-46af-45ad-8e8f-40d9e71692ec\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213694448-129\",\n        \"createdAt\": \"2025-05-26T03:55:03.432Z\"\n    },\n    {\n        \"id\": \"1bd43317-2d21-4eba-a195-e71953eca2a6\",\n        \"ingredientId\": \"afda1f7d-d08a-4e64-997d-7f6232312385\",\n        \"quantity\": 0.1,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213716022-492\",\n        \"createdAt\": \"2025-05-26T03:55:30.550Z\"\n    },\n    {\n        \"id\": \"206e9858-2d2f-4935-bb76-5da9b6c4d175\",\n        \"ingredientId\": \"96718697-530d-4422-b7b2-7ac4c0f31688\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213694448-129\",\n        \"createdAt\": \"2025-05-26T03:55:04.111Z\"\n    },\n    {\n        \"id\": \"208d8e85-c74d-4901-b5b9-a6eb52a8a22e\",\n        \"ingredientId\": \"884341d4-1a69-480c-9e3d-495b82a5e3e1\",\n        \"quantity\": 0.1,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:36:27.345Z\"\n    },\n    {\n        \"id\": \"20a13026-abe6-47a3-85a8-bcc3ec98906d\",\n        \"ingredientId\": \"bc2e8e84-8617-4314-b076-aa037f46e475\",\n        \"quantity\": 0.25,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213716022-492\",\n        \"createdAt\": \"2025-05-26T03:55:28.899Z\"\n    },\n    {\n        \"id\": \"24d7662b-3905-465f-92bc-085b451740cb\",\n        \"ingredientId\": \"89583cdc-6631-436c-8359-68b67401abc1\",\n        \"quantity\": 0.3,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214426649-237\",\n        \"createdAt\": \"2025-05-26T04:07:49.657Z\"\n    },\n    {\n        \"id\": \"26f9c08c-1b1e-44d5-a684-0a999a158155\",\n        \"ingredientId\": \"96718697-530d-4422-b7b2-7ac4c0f31688\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:33:15.428Z\"\n    },\n    {\n        \"id\": \"296f9efb-83c4-4bed-ad48-665d974138a4\",\n        \"ingredientId\": \"89583cdc-6631-436c-8359-68b67401abc1\",\n        \"quantity\": 0.3,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214426649-237\",\n        \"createdAt\": \"2025-05-26T04:07:59.543Z\"\n    },\n    {\n        \"id\": \"34c06891-405e-471b-a26e-56650d881e34\",\n        \"ingredientId\": \"96718697-530d-4422-b7b2-7ac4c0f31688\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214426649-237\",\n        \"createdAt\": \"2025-05-26T04:08:14.506Z\"\n    },\n    {\n        \"id\": \"3d80d3b8-82d2-401d-8ee2-83eb3c145ef4\",\n        \"ingredientId\": \"f38b5fb6-e605-443f-8949-937a4c564536\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214426649-237\",\n        \"createdAt\": \"2025-05-26T04:07:51.421Z\"\n    },\n    {\n        \"id\": \"3fcc932f-e804-4385-9495-c31a22a637c1\",\n        \"ingredientId\": \"afda1f7d-d08a-4e64-997d-7f6232312385\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213771931-248\",\n        \"createdAt\": \"2025-05-26T03:59:00.825Z\"\n    },\n    {\n        \"id\": \"4492237d-6361-43b8-93a6-1a159f224503\",\n        \"ingredientId\": \"884341d4-1a69-480c-9e3d-495b82a5e3e1\",\n        \"quantity\": 0.1,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:33:16.046Z\"\n    },\n    {\n        \"id\": \"44ebf8bc-1575-4bfd-a006-fe184daaf8b1\",\n        \"ingredientId\": \"25a69991-29bb-45ba-8f45-a8368f4a46d0\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:33.427Z\"\n    },\n    {\n        \"id\": \"4739e1ec-dc84-44f7-b62c-6452d9a7a889\",\n        \"ingredientId\": \"f38b5fb6-e605-443f-8949-937a4c564536\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214426649-237\",\n        \"createdAt\": \"2025-05-26T04:08:00.902Z\"\n    },\n    {\n        \"id\": \"4c2293ee-bf52-435e-b06d-cf90d7ec409a\",\n        \"ingredientId\": \"bc2e8e84-8617-4314-b076-aa037f46e475\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:22.839Z\"\n    },\n    {\n        \"id\": \"4f8384d0-f185-40aa-b476-9b86e59519f2\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213771931-248\",\n        \"createdAt\": \"2025-05-26T03:58:58.632Z\"\n    },\n    {\n        \"id\": \"4fc5c193-d23c-405f-b866-6aec335a5cb3\",\n        \"ingredientId\": \"884341d4-1a69-480c-9e3d-495b82a5e3e1\",\n        \"quantity\": 0.1,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:24.074Z\"\n    },\n    {\n        \"id\": \"50960985-f312-4ffe-90c1-0121b4880f9a\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:36:27.965Z\"\n    },\n    {\n        \"id\": \"52af7a88-5717-4e90-80d9-0fb87cbd52f7\",\n        \"ingredientId\": \"96718697-530d-4422-b7b2-7ac4c0f31688\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:15.551Z\"\n    },\n    {\n        \"id\": \"57d9fef7-21bb-419b-888b-03c9a8f85d6d\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:33:16.663Z\"\n    },\n    {\n        \"id\": \"57fb857e-b448-4a31-bb41-0dc5923a3e7e\",\n        \"ingredientId\": \"884341d4-1a69-480c-9e3d-495b82a5e3e1\",\n        \"quantity\": 0.1,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:32.186Z\"\n    },\n    {\n        \"id\": \"5d91279f-c1e9-4d8b-8896-cd2148fd001e\",\n        \"ingredientId\": \"ec14b32b-264f-448f-89e7-a84b6deb362d\",\n        \"quantity\": 0.1,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:23.456Z\"\n    },\n    {\n        \"id\": \"5d9eaa5f-4117-4b04-9061-54147d23df05\",\n        \"ingredientId\": \"a8e374a6-46af-45ad-8e8f-40d9e71692ec\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:36:26.116Z\"\n    },\n    {\n        \"id\": \"5f65678b-4701-408a-974e-67c01d94f251\",\n        \"ingredientId\": \"884341d4-1a69-480c-9e3d-495b82a5e3e1\",\n        \"quantity\": 0.1,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214426649-237\",\n        \"createdAt\": \"2025-05-26T04:08:15.891Z\"\n    },\n    {\n        \"id\": \"6068b036-c622-43f5-af23-2be648bfdc6b\",\n        \"ingredientId\": \"afda1f7d-d08a-4e64-997d-7f6232312385\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:25.923Z\"\n    },\n    {\n        \"id\": \"6329fda1-b6ea-41b3-8be4-0428034dc761\",\n        \"ingredientId\": \"ec14b32b-264f-448f-89e7-a84b6deb362d\",\n        \"quantity\": 0.1,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213771931-248\",\n        \"createdAt\": \"2025-05-26T03:58:56.521Z\"\n    },\n    {\n        \"id\": \"68824b8d-26aa-4dce-8c87-1b285f7cf789\",\n        \"ingredientId\": \"89583cdc-6631-436c-8359-68b67401abc1\",\n        \"quantity\": 0.3,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213755893-572\",\n        \"createdAt\": \"2025-05-26T03:56:02.090Z\"\n    },\n    {\n        \"id\": \"6a30481b-014a-4411-b32d-a0114a96f2ba\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:24.683Z\"\n    },\n    {\n        \"id\": \"6c640950-e0e8-433d-bf46-f086c24cd562\",\n        \"ingredientId\": \"a8e374a6-46af-45ad-8e8f-40d9e71692ec\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214426649-237\",\n        \"createdAt\": \"2025-05-26T04:08:13.383Z\"\n    },\n    {\n        \"id\": \"7ecec16e-9b6d-41d4-8b05-99597671a6bd\",\n        \"ingredientId\": \"96718697-530d-4422-b7b2-7ac4c0f31688\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:35:37.272Z\"\n    },\n    {\n        \"id\": \"91a7058a-b855-4100-8789-030c11699e1f\",\n        \"ingredientId\": \"884341d4-1a69-480c-9e3d-495b82a5e3e1\",\n        \"quantity\": 0.1,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213771931-248\",\n        \"createdAt\": \"2025-05-26T03:58:57.855Z\"\n    },\n    {\n        \"id\": \"95ea6001-8e85-4053-9b3c-c1735bfd94f9\",\n        \"ingredientId\": \"884341d4-1a69-480c-9e3d-495b82a5e3e1\",\n        \"quantity\": 0.1,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213694448-129\",\n        \"createdAt\": \"2025-05-26T03:55:04.768Z\"\n    },\n    {\n        \"id\": \"95ef189b-d00c-400b-b28b-98b5c7c15d8b\",\n        \"ingredientId\": \"25a69991-29bb-45ba-8f45-a8368f4a46d0\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213771931-248\",\n        \"createdAt\": \"2025-05-26T03:59:00.015Z\"\n    },\n    {\n        \"id\": \"967ac937-c3c6-4a26-a07f-314176b265e8\",\n        \"ingredientId\": \"89583cdc-6631-436c-8359-68b67401abc1\",\n        \"quantity\": 0.3,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:14.929Z\"\n    },\n    {\n        \"id\": \"9748b301-51cc-4dd1-a32d-8288567bb354\",\n        \"ingredientId\": \"884341d4-1a69-480c-9e3d-495b82a5e3e1\",\n        \"quantity\": 0.1,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:35:37.879Z\"\n    },\n    {\n        \"id\": \"97b39271-beec-4fd4-b583-80303a8d7d9d\",\n        \"ingredientId\": \"89583cdc-6631-436c-8359-68b67401abc1\",\n        \"quantity\": 0.4,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213716022-492\",\n        \"createdAt\": \"2025-05-26T03:55:27.953Z\"\n    },\n    {\n        \"id\": \"a0252108-e79d-4da0-81c7-8788ed0a220f\",\n        \"ingredientId\": \"f38b5fb6-e605-443f-8949-937a4c564536\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:01.990Z\"\n    },\n    {\n        \"id\": \"a31602dc-d608-4b7d-92e1-5516a15e6558\",\n        \"ingredientId\": \"ec14b32b-264f-448f-89e7-a84b6deb362d\",\n        \"quantity\": 0.1,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:31.564Z\"\n    },\n    {\n        \"id\": \"a5bdcea1-59bc-4878-94f4-7a1cecea0eae\",\n        \"ingredientId\": \"96718697-530d-4422-b7b2-7ac4c0f31688\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:34:40.090Z\"\n    },\n    {\n        \"id\": \"ae9aca0b-4f5c-4cdf-8c63-a02f06b062cd\",\n        \"ingredientId\": \"96718697-530d-4422-b7b2-7ac4c0f31688\",\n        \"quantity\": 0.3,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214426649-237\",\n        \"createdAt\": \"2025-05-26T04:07:48.931Z\"\n    },\n    {\n        \"id\": \"b1b7f8b0-fad1-4cc0-8b14-f82db5cac177\",\n        \"ingredientId\": \"25a69991-29bb-45ba-8f45-a8368f4a46d0\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:25.311Z\"\n    },\n    {\n        \"id\": \"b50de3a8-ea6f-4aec-aa5e-c2f5dc7c323a\",\n        \"ingredientId\": \"96718697-530d-4422-b7b2-7ac4c0f31688\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:00.737Z\"\n    },\n    {\n        \"id\": \"b7341b31-f39d-40e0-80c7-f759d8a5c06b\",\n        \"ingredientId\": \"bc2e8e84-8617-4314-b076-aa037f46e475\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213771931-248\",\n        \"createdAt\": \"2025-05-26T03:58:55.702Z\"\n    },\n    {\n        \"id\": \"bf7d201a-26cb-4799-ad26-ffdfee62a0e8\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213694448-129\",\n        \"createdAt\": \"2025-05-26T03:55:05.439Z\"\n    },\n    {\n        \"id\": \"c0b9504d-a851-4490-a16c-cd3b8083edea\",\n        \"ingredientId\": \"96718697-530d-4422-b7b2-7ac4c0f31688\",\n        \"quantity\": 0.3,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214426649-237\",\n        \"createdAt\": \"2025-05-26T04:07:58.923Z\"\n    },\n    {\n        \"id\": \"c1c8c153-4ae4-4db6-82d8-5e22d84e121c\",\n        \"ingredientId\": \"f38b5fb6-e605-443f-8949-937a4c564536\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213755893-572\",\n        \"createdAt\": \"2025-05-26T03:56:04.054Z\"\n    },\n    {\n        \"id\": \"c2cc2e71-15ec-4637-a031-8d15ee4e7a9b\",\n        \"ingredientId\": \"89583cdc-6631-436c-8359-68b67401abc1\",\n        \"quantity\": 0.3,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:00.085Z\"\n    },\n    {\n        \"id\": \"c7d9f941-9822-4e87-a66b-413ae6d5b39e\",\n        \"ingredientId\": \"bc2e8e84-8617-4314-b076-aa037f46e475\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:30.940Z\"\n    },\n    {\n        \"id\": \"cb4e2ff8-ade9-4db4-a33b-07771d3dcf8b\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214426649-237\",\n        \"createdAt\": \"2025-05-26T04:07:50.328Z\"\n    },\n    {\n        \"id\": \"ce6e6ece-c9ac-4ab9-93de-f3ef200ab4ee\",\n        \"ingredientId\": \"f38b5fb6-e605-443f-8949-937a4c564536\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:16.808Z\"\n    },\n    {\n        \"id\": \"d1d4fc6b-84a6-4245-9d65-0236a55a25a7\",\n        \"ingredientId\": \"96718697-530d-4422-b7b2-7ac4c0f31688\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:36:26.737Z\"\n    },\n    {\n        \"id\": \"d6d3e04d-f243-4389-9292-cff906d8eaaa\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:35:38.490Z\"\n    },\n    {\n        \"id\": \"d7b8491d-431c-4a83-bba3-cfaff0595dfc\",\n        \"ingredientId\": \"884341d4-1a69-480c-9e3d-495b82a5e3e1\",\n        \"quantity\": 0.1,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:34:40.701Z\"\n    },\n    {\n        \"id\": \"dc100512-517e-495b-b227-013b07fec03e\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:16.167Z\"\n    },\n    {\n        \"id\": \"e4d44fab-e911-4a8d-b22f-1f24b266e853\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:32.807Z\"\n    },\n    {\n        \"id\": \"e5eee4a6-1fc8-4202-9ff0-12a304ca8e11\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213716022-492\",\n        \"createdAt\": \"2025-05-26T03:55:29.568Z\"\n    },\n    {\n        \"id\": \"f0871b06-7578-4515-80f8-5f274f8d49fe\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:34:41.315Z\"\n    },\n    {\n        \"id\": \"f3094d49-ccc9-4c2b-9739-97d5081b3ba9\",\n        \"ingredientId\": \"afda1f7d-d08a-4e64-997d-7f6232312385\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748214970811-842\",\n        \"createdAt\": \"2025-05-26T04:17:34.038Z\"\n    },\n    {\n        \"id\": \"f4647e56-df46-4f6a-b06f-a39179deee27\",\n        \"ingredientId\": \"9410eebf-4846-47d6-b711-9d159ca9a087\",\n        \"quantity\": 0.05,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748213755893-572\",\n        \"createdAt\": \"2025-05-26T03:56:03.396Z\"\n    },\n    {\n        \"id\": \"f9073072-edbc-42c5-a701-173379efea3f\",\n        \"ingredientId\": \"a8e374a6-46af-45ad-8e8f-40d9e71692ec\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:35:36.659Z\"\n    },\n    {\n        \"id\": \"fb06e3a1-a5e9-4581-a4d9-8abb1685e7ab\",\n        \"ingredientId\": \"a8e374a6-46af-45ad-8e8f-40d9e71692ec\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:33:14.753Z\"\n    },\n    {\n        \"id\": \"fcdd22f4-57c0-49c1-8101-d08526a6f102\",\n        \"ingredientId\": \"a8e374a6-46af-45ad-8e8f-40d9e71692ec\",\n        \"quantity\": 0.2,\n        \"type\": \"OUT\",\n        \"orderId\": \"order-1748212239057-727\",\n        \"createdAt\": \"2025-05-26T03:34:39.479Z\"\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
