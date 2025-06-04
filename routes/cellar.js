@@ -31,4 +31,14 @@ router.get('/movements/out', async (req, res) => {
   }
 });
 
+// New endpoint for cellar health check
+router.get('/health', async (req, res) => {
+  try {
+    const response = await axios.get(`${process.env.CELLAR_SERVICE_URL}/cellar/health`);
+    res.json(response.data);
+  } catch (error) {
+    res.status(error.response?.status || 500).json({ error: error.message });
+  }
+});
+
 module.exports = router;
