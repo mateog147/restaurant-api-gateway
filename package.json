@@ -2,18 +2,31 @@
   "name": "restaurant-api-gateway",
   "version": "1.0.0",
   "description": "API Gateway for Restaurant Microservices",
-  "main": "app.js",
+  "type": "module",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:cov": "NODE_OPTIONS=--experimental-vm-modules jest --coverage"
   },
   "dependencies": {
     "axios": "^1.6.2",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "jest": "^30.0.5",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "testEnvironment": "node"
   }
 }
