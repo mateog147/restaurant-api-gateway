@@ -1,10 +1,10 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import kitchenRoutes from './routes/kitchen.js';
-import cellarRoutes from './routes/cellar.js';
+import kitchenRoutes from './src/routes/kitchen.js';
+import cellarRoutes from './src/routes/cellar.js';
 import swaggerUi from 'swagger-ui-express';
-import specs from './swagger.js';
+import specs from './src/swagger.js';
 
 const app = express();
 
